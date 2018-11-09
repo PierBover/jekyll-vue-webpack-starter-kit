@@ -1,0 +1,10 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": ["since 2015", "ie >= 10"]
+			}
+		]
+	]
+}
