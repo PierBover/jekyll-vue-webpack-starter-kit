@@ -1,0 +1,10 @@
+sass:
+    sass_dir: _scss
+    style: compressed
+
+exclude:
+  - package.json
+  - package-lock.json
+  - node_modules
+  - README.md
+  - .gitignore

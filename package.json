@@ -1,0 +1,41 @@
+{
+  "name": "jekyll-vue-webpack-starter-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack-dev": "NODE_ENV=development webpack --config _src/webpack.config.js",
+    "webpack-build": "NODE_ENV=production webpack --config _src/webpack.config.js",
+    "dev": "npm run webpack-dev & jekyll serve",
+    "build": "npm run webpack-build && jekyll build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pierbover@github.com/PierBover/jekyll-vue-webpack-starter-kit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierBover/jekyll-vue-webpack-starter-kit/issues"
+  },
+  "homepage": "https://github.com/PierBover/jekyll-vue-webpack-starter-kit#readme",
+  "devDependencies": {
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "mini-css-extract-plugin": "^0.4.4",
+    "node-sass": "^4.10.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.1.0",
+    "vue-loader": "^15.4.2",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.5.17",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}
