@@ -4,7 +4,7 @@ A Jekyll project with Webpack 4 configuration and multiple entry points for each
 
 Before running make sure you have Jekyll installed and don't forget to install JavaScript dependencies with `npm i`.
 
-There is a little Webpack plugin in `webpack.config.js` for generating the `_data/webpack.yml` which allows you to get the `site.data.webpack.hash` variable in your Jekyll files. I got this idea from [Phil's Upvalue blog](https://upvalue.io/webpack-jekyll/).
+There is a little Webpack plugin in `_src/webpack.config.js` for generating the `_data/webpack.yml` which allows you to get the `site.data.webpack.hash` variable in your Jekyll files. I got this idea from [Phil's Upvalue blog](https://upvalue.io/webpack-jekyll/).
 
 Every time you create a new page and want to use a `.js` file you have to add these 2 variables to the front matter:
 ```
