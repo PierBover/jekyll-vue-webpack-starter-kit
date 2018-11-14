@@ -7,6 +7,11 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 const DEV_MODE = process.env.NODE_ENV === 'development';
 
+function cleanOldBuilds () {
+	rimraf.sync(path.resolve(__dirname, '../js'));
+	rimraf.sync(path.resolve(__dirname, '../css/webpack/'));
+}
+
 class JekyllPlugin {
 	apply(compiler) {
 		compiler.hooks.done.tap('jekyll webpack.yml', (stats) => {
@@ -14,10 +19,8 @@ class JekyllPlugin {
 			fs.writeFileSync(path.join(__dirname, '../_data', 'webpack.yml'), content);
 		});
 
-		compiler.hooks.entryOption.tap('clean builds', (stats) => {
-			rimraf.sync(path.resolve(__dirname, '../js'));
-			rimraf.sync(path.resolve(__dirname, '../css/webpack/'));
-		});
+		compiler.hooks.beforeRun.tap('clean builds', cleanOldBuilds);
+		compiler.hooks.watchRun.tap('clean builds watch', cleanOldBuilds);
 	}
 }
 
